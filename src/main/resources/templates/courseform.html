@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Add Course</title>
@@ -11,21 +11,21 @@
 
 <div class="container">
 
-    <form action="#" th:action="@{/process}" th:object="${course}"
-          method="post">
-        <input type="hidden" th:field="*{id}"/>
+    <form action="#" method="post" th:action="@{/process}"
+          th:object="${course}">
+        <input th:field="*{id}" type="hidden"/>
 
-        Title: <input type="text" th:field="*{title}"/>
-        <span th:if="${#fields.hasErrors('title')}" th:errors="*{title}"></span><br/>
+        Title: <input th:field="*{title}" type="text"/>
+        <span th:errors="*{title}" th:if="${#fields.hasErrors('title')}"></span><br/>
 
-        Instructor: <input type="text" th:field="*{instructor}"/>
-        <span th:if="${#fields.hasErrors('instructor')}" th:errors="*{instructor}"></span><br/>
+        Instructor: <input th:field="*{instructor}" type="text"/>
+        <span th:errors="*{instructor}" th:if="${#fields.hasErrors('instructor')}"></span><br/>
 
-        Description: <input type="text" th:field="*{description}"/>
-        <span th:if="${#fields.hasErrors('description')}" th:errors="*{description}"></span><br/>
+        Description: <input th:field="*{description}" type="text"/>
+        <span th:errors="*{description}" th:if="${#fields.hasErrors('description')}"></span><br/>
 
-        Credits: <input type="text" th:field="*{credit}"/>
-        <span th:if="${#fields.hasErrors('credit')}" th:errors="*{credit}"></span><br/>
+        Credits: <input th:field="*{credit}" type="text"/>
+        <span th:errors="*{credit}" th:if="${#fields.hasErrors('credit')}"></span><br/>
 
         <input type="submit" value="Submit"/>
     </form>
