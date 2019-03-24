@@ -4,14 +4,14 @@
       xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8"/>
-    <title>Title</title>
     <th:block th:fragment="header">
-        <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}"/>
         <script th:src="@{/js/bootstrap.min.js}" type="text/javascript"></script>
         <script th:src="@{/js/popper.min.js}" type="text/javascript"></script>
         <script th:src="@{/js/jquery-3.2.1.slim.min.js}" type="text/javascript"></script>
+        <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}"/>
         <link rel="stylesheet" th:href="@{/css/style.css}"/>
     </th:block>
+    <title>Title</title>
 </head>
 <body>
 
@@ -45,7 +45,7 @@
 </div>
 
 <div th:fragment="footer">
-    <div class="footer">Copyright 2018</div>
+    <div align="center" class="footer">Copyright 2018</div>
 </div>
 
 </body>

@@ -7,6 +7,8 @@ Description of project goes here
 * Thymeleaf
 * JPA/Hibernate
 
-Default user: user/password
+Default user:   jim/password
+
+Admin:          admin/password
 
 Heroku Link: ....................

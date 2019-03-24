@@ -69,6 +69,9 @@ public class HomeController {
     @RequestMapping("/detail/{id}")
     public String showCourse(@PathVariable("id") long id, Model model) {
         model.addAttribute("course", courseRepository.findById(id).get());
+        if (userService.getUser() != null) {
+            model.addAttribute("user_id", userService.getUser().getId());
+        }
         return "show";
     }
 

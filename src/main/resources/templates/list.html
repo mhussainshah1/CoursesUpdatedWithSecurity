@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org"
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security"
 >
 <head>
     <meta charset="UTF-8">
@@ -30,6 +32,11 @@
                 </span>
 
                 <a th:href="@{/detail/{id}(id=${course.id})}">Details</a>
+
+                <div sec:authorize="hasAuthority('ADMIN')">
+                    <a th:href="@{/update/{id}(id=${course.id})}">Update</a>
+                    <a th:href="@{/delete/{id}(id=${course.id})}">Delete</a>
+                </div>
             </td>
         </tr>
     </table>

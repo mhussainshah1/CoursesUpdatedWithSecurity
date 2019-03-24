@@ -2,6 +2,7 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org"
 >
 <head>
+    <meta charset="UTF-8"/>
     <title>Registration</title>
     <th:block th:insert="base :: header"></th:block>
 </head>
@@ -19,42 +20,57 @@
           th:object="${user}">
 
         First Name
-        <mark><strong>
+        <mark>
+            <strong>
                 <span th:errors="*{firstName}"
-                      th:if="${#fields.hasErrors('firstName')}">First Name error</span>
-        </strong></mark>
+                      th:if="${#fields.hasErrors('firstName')}">First Name error
+                </span>
+            </strong>
+        </mark>
         <input id="firstName" placeholder="First Name" th:field="*{firstName}"
                type="text"/><br/>
 
         Last Name
-        <mark><strong>
+        <mark>
+            <strong>
                 <span th:errors="*{lastName}"
-                      th:if="${#fields.hasErrors('lastName')}">Last Name error</span>
-        </strong></mark>
+                      th:if="${#fields.hasErrors('lastName')}">Last Name error
+                </span>
+            </strong>
+        </mark>
         <input id="lastName" placeholder="Last Name" th:field="*{lastName}"
                type="text"/><br/>
 
         Email
-        <mark><strong>
+        <mark>
+            <strong>
                 <span th:errors="*{email}"
-                      th:if="${#fields.hasErrors('email')}">Email error</span>
-        </strong></mark>
+                      th:if="${#fields.hasErrors('email')}">Email error
+                </span>
+            </strong>
+        </mark>
         <input id="email" placeholder="Email" th:field="*{email}"
                type="text"/><br/>
 
         Username
-        <mark><strong>
+        <mark>
+            <strong>
                 <span th:errors="*{username}"
-                      th:if="${#fields.hasErrors('username')}">Username error</span>
-        </strong></mark>
+                      th:if="${#fields.hasErrors('username')}">Username error
+                </span>
+            </strong>
+        </mark>
         <input id="username" placeholder="Username" th:field="*{username}"
                type="text"/><br/>
 
         Password
-        <mark><strong>
+        <mark>
+            <strong>
                 <span th:errors="*{password}"
-                      th:if="${#fields.hasErrors('password')}">Password error</span>
-        </strong></mark>
+                      th:if="${#fields.hasErrors('password')}">Password error
+                </span>
+            </strong>
+        </mark>
         <input id="password" placeholder="Password" th:field="*{password}"
                type="password"/><br/>
 

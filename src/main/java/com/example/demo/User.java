@@ -1,9 +1,10 @@
 package com.example.demo;
 
-
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 import javax.persistence.*;
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotEmpty;
 import java.util.Collection;
 
 @Entity
@@ -14,21 +15,27 @@ public class User {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
+    @Email
+    @NotEmpty
     @Column(name = "email", nullable = false)
     private String email;
 
+    @NotEmpty
     @Column(name = "password")
     private String password;
 
+    @NotEmpty
     @Column(name = "first_name")
     private String firstName;
 
+    @NotEmpty
     @Column(name = "last_name")
     private String lastName;
 
     @Column(name = "enabled")
     private boolean enabled;
 
+    @NotEmpty
     @Column(name = "username")
     private String username;
 
